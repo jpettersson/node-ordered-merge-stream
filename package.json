@@ -2,7 +2,10 @@
   "name": "ordered-merge-stream",
   "version": "0.0.0",
   "description": "Merge an array of streams and emit data according to the array order",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jpettersson/node-ordered-merge-stream.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js"
