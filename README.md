@@ -8,7 +8,7 @@ This function is used in the [lingon](http://github.com/jpettersson/lingon) proj
 
 ### API
 
-Function: orderedMergeStream(streams)
+#### Function: orderedMergeStream(streams)
 
 **Arguments:**
 
