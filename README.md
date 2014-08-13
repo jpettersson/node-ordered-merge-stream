@@ -12,7 +12,7 @@ This function is used in the [lingon](http://github.com/jpettersson/lingon) proj
 
 **Arguments:**
 
-streams: An Array of node stream objects. The input stream objects need to be in the "flowing" mode, so you might have to call `stream.pause()` before sending them in. Read more here: 
+streams: An Array of node stream objects. The input stream objects need to be in the "flowing" mode, so you might have to call `stream.pause()` before sending them in.
 
 **Returns:**
 
