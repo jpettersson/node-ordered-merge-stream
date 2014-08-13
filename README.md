@@ -64,3 +64,7 @@ A stream object that will emitt data from all streams. The data will be emitted 
 
 
 ```
+
+### Tests
+
+Run the tests for this project with: `tape test/test.js`
