@@ -4,7 +4,7 @@ Merge multiple node streams into one and control the order of the emitted data.
 
 ### Why?
 
-This function is used in the [lingon](http://github.com/jpettersson/lingon) project. There we have a bunch of [vfs.src()](https://github.com/c9/vfs) streams that we need to concatenate in a specific order.
+This function is used in the [lingon](http://github.com/jpettersson/lingon) project. There we have a bunch of [vfs.src()](https://github.com/wearefractal/vinyl-fs) streams that we need to concatenate in a specific order.
 
 ### API
 
