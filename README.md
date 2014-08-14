@@ -23,25 +23,25 @@ A stream object that will emitt data from all streams. The data will be emitted 
 ```JavaScript
   var through = require('through');
   var orderedMergeStream = require('ordered-merge-stream');
-  
+
   // Create a few stream objects
   var lets = through();
   var go = through();
   var to = through();
   var space = through();
-  
+
   // Order them in an Array
   var streams = [lets,
                  go,
                  to,
                  space];
-                 
+
   // Set the streams in "flowing mode".
   lets.pause();
   go.pause();
   to.pause();
   space.pause();
-  
+
   // Create a single stream out of the Array
   var mergedStream = orderedMergeStream(streams);
 
@@ -50,18 +50,22 @@ A stream object that will emitt data from all streams. The data will be emitted 
   mergedStream.on('data', function(data){
     cache.push(data);
   });
-   
+
   // Write data to the streams in any order
   space.write('space!');
+  space.end();
   go.write('go');
+  go.end();
   to.write('to');
-  space.write('Lets');
-  
+  lets.write('Lets');
+  lets.end();
+  to.end();
+
+
   // The resulting data will be received based on the Array order.
   mergedStream.on('end', function() {
-    console.log(cache) // Will output: ["lets", "go", "to", "space!"]
-  }
-
+    console.log(cache); // Will output: ["lets", "go", "to", "space!"]
+  });
 
 ```
 
