@@ -6,6 +6,13 @@ Merge multiple node streams into one and control the order of the emitted data.
 
 This function is used in the [lingon](http://github.com/jpettersson/lingon) project. There we have a bunch of [vfs.src()](https://github.com/wearefractal/vinyl-fs) streams that we need to concatenate in a specific order.
 
+### Installing
+
+
+```
+npm install ordered-merge-stream
+```
+
 ### API
 
 #### Function: orderedMergeStream(streams)
