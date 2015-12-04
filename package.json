@@ -1,6 +1,6 @@
 {
   "name": "ordered-merge-stream",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Merge an array of streams and emit data according to the array order",
   "repository": {
     "type": "git",
